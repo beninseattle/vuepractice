@@ -7,7 +7,7 @@ const onInput = (e) => {
 
 <template>
   <div>
-    Search videos: <input @input="onInput" />
+    <label for="">Search videos: <input @input="onInput" /></label>
   </div>
 </template>
 

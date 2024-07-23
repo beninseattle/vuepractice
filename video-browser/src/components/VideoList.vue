@@ -5,9 +5,7 @@ const props = defineProps(['videos']);
 <template>
   VideoList
   <ul>
-    <ul>
-      <li v-for="item in props.videos">{{ item }}</li>
-    </ul>
+    <li v-for="item in props.videos">{{ item }}</li>
   </ul>
 </template>
 
