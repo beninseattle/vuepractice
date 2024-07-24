@@ -1,15 +1,24 @@
 <script setup>
-const emit = defineEmits(['termChange']);
+import { SEARCH_INPUT_UPDATE } from '@/eventsDefs';
+
+const emit = defineEmits([SEARCH_INPUT_UPDATE]);
 const onInput = (e) => {
-  emit('termChange', e.target.value);
+  emit(SEARCH_INPUT_UPDATE, e.target.value);
 };
 </script>
 
 <template>
   <div>
-    <label for="">Search videos: <input @input="onInput" /></label>
+    <input @input="onInput" />
   </div>
 </template>
 
-<style>
+<style scoped>
+  input {
+    width: 75%;
+  }
+  div {
+    text-align: center;
+    margin: 20px;
+  }
 </style>
